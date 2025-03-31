@@ -8,7 +8,7 @@ import { prerender } from "react-dom/static";
 export default defineConfig({
   plugins: [
     vike({
-      prerender: false,
+      prerender: true,
     }),
     react({}),
     tailwindcss(),
