@@ -12,6 +12,7 @@ async function data(pageContext: { routeParams: { id: string } }) {
     price: product.price,
     ids: pageContext.routeParams.id,
   };
-
+  console.log("hello from server");
+  console.log("APISETTING");
   return product;
 }
