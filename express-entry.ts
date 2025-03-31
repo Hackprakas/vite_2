@@ -5,9 +5,10 @@ import { vikeHandler } from "./server/vike-handler";
 import { createHandler } from "@universal-middleware/express";
 import express from "express";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const root = __dirname;
+const filename = fileURLToPath(import.meta.url);
+const rootDir = dirname(filename); // Renamed __dirname to rootDir
+
+const root = rootDir;
 const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 const hmrPort = process.env.HMR_PORT
   ? parseInt(process.env.HMR_PORT, 10)
